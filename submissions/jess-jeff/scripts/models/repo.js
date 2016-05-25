@@ -6,7 +6,7 @@
   // TODO: Refactor this ajax method into a get method to the proxy
   //  'end point' provided by server.js.
   repos.requestRepos = function(callback) {
-    $.get('github/users/jmalesh/repos' + '?per_page=15' + '&sort=updated')
+    $.get('/github/users/jmalesh/repos' + '?per_page=15' + '&sort=updated')
     .done(function(){
       repos.all = data;
     }).done(callback);
