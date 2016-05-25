@@ -7,7 +7,7 @@
   //  'end point' provided by server.js.
   repos.requestRepos = function(callback) {
     $.get('/github/users/jmalesh/repos' + '?per_page=15' + '&sort=updated')
-    .done(function(){
+    .done(function(data){
       repos.all = data;
     }).done(callback);
   };
